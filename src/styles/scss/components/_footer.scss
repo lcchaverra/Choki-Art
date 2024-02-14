@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 5rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.red-social {
+    display: flex;
+    gap: 1rem;
+    color: var(--primary);
+    font-size: 2rem;
+    & a {
+        color: var(--primary);
+    }
+}
+
+.icon {
+    transform: scale(1.2);
+    &:hover{
+        cursor: pointer;
+        transition: transform .3s;
+    }
+}

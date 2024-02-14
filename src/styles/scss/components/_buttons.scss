@@ -1,0 +1,49 @@
+.btn {
+    color: #FFFF;
+    text-align: center;
+    align-items: center;
+    padding: .5em 1em;
+    margin: .5em; 
+    border-radius: 1.5rem;
+    border: 2px solid #CCCC;
+    background-color: var(--primary);
+    will-change: filter background-color;
+    transition: filter .3s, background-color .3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    transition: transform .3s;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.secundary {
+    color: var(--letter-color);
+    background-color: var(--bg-color);
+    outline: #CCCC;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.search-input {
+    background-color: var(--primary);
+    width: 80%;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 3rem;
+    &::placeholder{
+        color: var(--bg-color);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+.search-icon {
+    position: absolute;
+    left: 2rem;
+    font-size: 1.8rem;
+    color: var(--bg-color);;
+}
