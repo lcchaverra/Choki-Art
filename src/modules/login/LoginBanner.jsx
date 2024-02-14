@@ -14,7 +14,7 @@ const LoginBanner = () => {
       <div className="login-content">
         <div className="title-container">
                 <img className="Main-logo" src={Logo} alt="Logo de Choki Art" />
-                <h1>Choki-Art alsjdhaksjdhaksjdhgkajsdhkjasdak</h1>
+                <h1>Choki-Art</h1>
         </div>
         <div className="logo-container">
           <img className="login-logo" src={Logo} alt="Logo de Choki Art" />
