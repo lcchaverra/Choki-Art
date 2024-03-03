@@ -1,25 +1,29 @@
-import {useState} from 'react'
-const Tabs = () => {
-
-  const [activeTab, setActiveTab] = useState('Abstracta');
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  }
+const Tabs = ({ activeCategory, onCategoryChange }) => {
 
   return (
     <>
-    <nav className='tabs-menu'>
+      <nav className="tabs-menu">
         <ul>
-            <li className={activeTab === 'Abstracta' ? 'activeTab' : ''} onClick={()=> handleTabClick('Abstracta')}>Abstracta</li>
-            <li className={activeTab === 'Ceramica' ? 'activeTab' : ''} onClick={()=> handleTabClick('Ceramica')}>Ceramica</li>
-            <li className={activeTab === 'Escultura' ? 'activeTab' : ''} onClick={()=> handleTabClick('Escultura')}>Escultura</li>
-            <li className={activeTab === 'Madera Tallada' ? 'activeTab' : ''} onClick={()=> handleTabClick('Madera Tallada')}>Madera Tallada</li>
-            <li className={activeTab === 'Contemporánea' ? 'activeTab' : ''} onClick={()=> handleTabClick('Contemporánea')}>Contemporánea</li>
+          {[
+            "All",
+            "Abstracta",
+            "Ceramica",
+            "Escultura",
+            "Madera Tallada",
+            "Contemporánea",
+          ].map((tab) => (
+            <li
+              key={tab}
+              className={activeCategory === tab ? "activeTab" : ""}
+              onClick={() => onCategoryChange(tab)}
+            >
+              {tab}
+            </li>
+          ))}
         </ul>
-    </nav>
+      </nav>
     </>
-  )
-}
+  );
+};
 
-export default Tabs
+export default Tabs;

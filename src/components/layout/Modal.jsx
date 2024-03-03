@@ -42,6 +42,12 @@ const Modal = ({onClose}) => {
                 title: "Validando...",
                 text: "se realizó el pedido correctamente!",
               });
+              setUsername("");
+              setEmail("");
+              setPhone("");
+              setAddress("");
+              setCount(0);
+              setTotal(0);
             } else {
               Swal.fire({
                 icon: "error",

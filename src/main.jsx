@@ -5,6 +5,7 @@ import Login from './modules/login/Login.jsx'
 import Register from './modules/register/Register.jsx'
 import LoginBanner from './modules/login/LoginBanner.jsx'
 import Error404 from './modules/error/Error404.jsx'
+import Favorites from './modules/favorites/Favorites.jsx'
 import './styles/css/styles.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <LoginBanner />,
+  },
+  {
+    path: '/favorites',
+    element: <Favorites />,
   },
   {
     path: '*',
